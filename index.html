@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="common/css/materialize.css"  media="screen,projection"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wizard101 - Energy Calculator</title>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="orange darken-2">
+            <div class="nav-wrapper">
+                <a class="brand-logo waves-effect">Energy Calculator</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="https://discord.gg/FQaJFds" class="waves-effect waves-light" target="_blank"><i class="material-icons left">people</i>Join DiscordGamers W101ES Discord Server</a></li>
+                    <li><a href="mailto:incoming+thepotatocamera-energy-calc-13223937-issue-@incoming.gitlab.com?&subject=Bug%20or%20enhancement%20report&body=Remember%20that%20abusing%20this%20system%20will%20cause%20your%20reports%20to%20be%20ignored." target="_top" class="waves-effect waves-light"><i class="material-icons left">bug_report</i>Report issues or enhancements</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="col s12">
+        <ul class="tabs tabs-fixed-width orange-text">
+            <li class="tab"><a class="active waves-effect" href="#home">Home</a></li>
+            <li class="tab"><a class="waves-effect" href="#english">English</a></li>
+            <li class="tab"><a class="waves-effect" href="#spanish">Español</a></li>
+        </ul>
+    </div>
+
+    <div id="home" class="col s12">
+        <div class="container">
+            <h2>Welcome to the energy calculator for Wizard101!</h2>
+            <p>This is a simple calculator that will calculate the time you need to wait before reaching a quantity of energy.<br>
+            To begin, simply select your language and input the needed info.<br>
+            Also, feel free to <a href="https://discord.gg/FQaJFds" target="_blank">join DiscordGamers, a spanish Discord server about Wizard101.</a></p>
+            <br>
+            <p>Created by ThePotatoCaera#8679</p>
+            <br>
+            <div class="divider"></div>
+            <h2>¡Bienvenido a la calculadora de energía para Wizard101</h2>
+            <p>Esto es una calculadora simple que te dirá el tiempo que tienes que esperar hasta llegar a cierta cantidad de energía.<br>
+            Para empezas, tan solo selecciona tu idioma y escribe la información que se te pide.<br>
+            No olvides también de <a href="https://discord.gg/FQaJFds" target="_blank">unirte a DiscordGamers, un servidor de Discord en español sobre Wizard101.</a></p>
+            <br>
+            <p>Creado por ThePotatoCamera#8679</p>
+        </div>
+    </div>
+    <div id="english" class="col s12">
+    <div class="container">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">person</i>
+                    <input id="english-ce" class="validate" type="number" min=0 required value="0">
+                    <label for="english-ce">Actual energy</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">flag</i>
+                    <input id="english-te" class="validate" type="number" min=1 required value="1">
+                    <label for="english-te">Final energy</label>
+                </div>
+            </div>
+            <div class="row">
+                <h5>Membership:</h5>
+                <div class="switch">
+                    <label>
+                        No
+                        <input type="checkbox" id="english-member">
+                        <span class="lever"></span>
+                        Yes
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field">
+                    <button class="btn waves-effect waves-light" type="button" onclick="encalc();">Calculate
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="divider"></div>
+    <div class="container">
+    <div class="row">
+        <div class="input-field col s12 m4 l8">
+            <i class="material-icons prefix">schedule</i>
+            <input id="english-time" disabled type="text" placeholder="Estimated time" title="Estimated time to reach the end energy (in minutes).">
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+    <div id="spanish" class="col s12">
+    <div class="container">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">person</i>
+                    <input id="spanish-ce" class="validate" type="number" min=0 required value="0">
+                    <label for="spanish-ce">Energía actual</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">flag</i>
+                    <input id="spanish-te" class="validate" type="number" min=1 required value="1">
+                    <label for="spanish-te">Energía final</label>
+                </div>
+            </div>
+            <div class="row">
+                <h5>Suscripción al Club Wizard101:</h5>
+                <div class="switch">
+                    <label>
+                        No
+                        <input type="checkbox" id="spanish-member">
+                        <span class="lever"></span>
+                        Si
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field">
+                    <button class="btn waves-effect waves-light" type="button" onclick="spcalc();">Calcular
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="divider"></div>
+    <div class="container">
+    <div class="row">
+        <div class="input-field col s12 m4 l8">
+            <i class="material-icons prefix">schedule</i>
+            <input id="spanish-time" disabled type="text" placeholder="Tiempo estimado" title="Tiempo estimado para que la energía alcance ese valor (en minutos).">
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <script type="text/javascript" src="common/js/materialize.js"></script>
+    <script>
+    M.AutoInit();
+    </script>
+    <script>
+        function spcalc() {
+            var ce = Number(document.getElementById('spanish-ce').value);
+            var te = Number(document.getElementById('spanish-te').value);
+            var ceTime = ce * 7.5;
+            var teTime = te * 7.5;
+
+            if (document.getElementById('spanish-member').checked == true) {
+                var ceTime = ce * 7.5;
+                var teTime = te * 7.5;
+            }
+
+            else if (document.getElementById('spanish-member').checked == false) {
+                var ceTime = ce * 10;
+                var teTime = te * 10;
+            };
+
+            if (ce > -1 && te > 0 && ce < te) {
+                document.getElementById('spanish-time').value = teTime - ceTime + ' minutos';
+                return
+            }
+            else if (ce = te){
+                document.getElementById('spanish-time').value = 'Has alcanzado la energía final.';
+            }
+            else if (ce < 0 ){
+                window.alert('La energía actual no puede ser menor a 0.')
+            }
+            else if (te < 1){
+                window.alert('La energía final debe ser mayor a 0.')
+            }
+            else if (ce > te){
+                window.alert('La energía actual no puede ser mayor a la final.')
+            }
+            else {
+                window.alert('Error desconocido. ¯\_(ツ)_/¯')
+            }
+        };
+        function encalc() {
+            var ce = Number(document.getElementById('english-ce').value);
+            var te = Number(document.getElementById('english-te').value);
+            var ceTime = ce * 7.5;
+            var teTime = te * 7.5;
+
+            if (document.getElementById('english-member').checked == true) {
+                var ceTime = ce * 7.5;
+                var teTime = te * 7.5;
+            }
+
+            else if (document.getElementById('english-member').checked == false) {
+                var ceTime = ce * 10;
+                var teTime = te * 10;
+            };
+
+            if (ce > -1 && te > 0 && ce < te) {
+                document.getElementById('english-time').value = teTime - ceTime + ' minutes';
+                return
+            }
+            else if (ce = te){
+                document.getElementById('english-time').value = 'You reached the final energy.';
+            }
+            else if (ce < 0 ){
+                window.alert('Current energy cannot be fewer than 0.')
+            }
+            else if (te < 1){
+                window.alert('Final energy must be over 0.')
+            }
+            else if (ce > te){
+                window.alert('Current energy cannot be greater than final energy.')
+            }
+            else {
+                window.alert('Unknown error. ¯\_(ツ)_/¯')
+            }
+        };
+    </script>
+</body>
+</html>
