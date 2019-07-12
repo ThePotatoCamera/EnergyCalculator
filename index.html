@@ -171,7 +171,7 @@
                 document.getElementById('spanish-time').value = teTime - ceTime + ' minutos';
                 return
             }
-            else if (ce = te){
+            else if (ce == te){
                 document.getElementById('spanish-time').value = 'Has alcanzado la energía final.';
             }
             else if (ce < 0 ){
@@ -207,7 +207,7 @@
                 document.getElementById('english-time').value = teTime - ceTime + ' minutes';
                 return
             }
-            else if (ce = te){
+            else if (ce == te){
                 document.getElementById('english-time').value = 'You reached the final energy.';
             }
             else if (ce < 0 ){
