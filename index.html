@@ -10,25 +10,28 @@
     <title>Wizard101 - Energy Calculator</title>
 </head>
 <body>
-    <div class="navbar-fixed">
-        <nav class="orange darken-2">
+        <nav class="orange darken-2 nav-extended">
             <div class="nav-wrapper">
                 <a class="brand-logo waves-effect">Energy Calculator</a>
-                <ul class="right hide-on-med-and-down">
+                <a class="sidenav-trigger" data-target="mobile-navbar" href="#"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down" id="nav-mobile">
                     <li><a href="https://discord.gg/FQaJFds" class="waves-effect waves-light" target="_blank"><i class="material-icons left">people</i>Join DiscordGamers W101ES Discord Server</a></li>
                     <li><a href="mailto:incoming+thepotatocamera-energy-calc-13223937-issue-@incoming.gitlab.com?&subject=Bug%20or%20enhancement%20report&body=Remember%20that%20abusing%20this%20system%20will%20cause%20your%20reports%20to%20be%20ignored." target="_top" class="waves-effect waves-light"><i class="material-icons left">bug_report</i>Report issues or enhancements</a></li>
                 </ul>
             </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active waves-effect" href="#home">Home</a></li>
+                    <li class="tab"><a class="waves-effect" href="#english">English</a></li>
+                    <li class="tab"><a class="waves-effect" href="#spanish">Español</a></li>
+                </ul>
+            </div>
         </nav>
-    </div>
 
-    <div class="col s12">
-        <ul class="tabs tabs-fixed-width orange-text">
-            <li class="tab"><a class="active waves-effect" href="#home">Home</a></li>
-            <li class="tab"><a class="waves-effect" href="#english">English</a></li>
-            <li class="tab"><a class="waves-effect" href="#spanish">Español</a></li>
+        <ul class="sidenav" id="mobile-navbar">
+            <li><a href="https://discord.gg/FQaJFds" class="waves-effect waves-light" target="_blank"><i class="material-icons left">people</i>Join DiscordGamers W101ES Discord Server</a></li>
+            <li><a href="mailto:incoming+thepotatocamera-energy-calc-13223937-issue-@incoming.gitlab.com?&subject=Bug%20or%20enhancement%20report&body=Remember%20that%20abusing%20this%20system%20will%20cause%20your%20reports%20to%20be%20ignored." target="_top" class="waves-effect waves-light"><i class="material-icons left">bug_report</i>Report a bug</a></li>
         </ul>
-    </div>
 
     <div id="home" class="col s12">
         <div class="container">
