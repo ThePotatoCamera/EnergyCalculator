@@ -169,23 +169,30 @@
             };
 
             if (ce > -1 && te > 0 && ce < te) {
-                document.getElementById('spanish-time').value = teTime - ceTime + ' minutos';
-                return
+                var finalTime = teTime - ceTime;
+                var convertedTime = esTimeConverter(finalTime);
+                document.getElementById('spanish-time').value = convertedTime;
+                return;
             }
             else if (ce == te){
                 document.getElementById('spanish-time').value = 'Has alcanzado la energía final.';
+                return;
             }
             else if (ce < 0 ){
-                window.alert('La energía actual no puede ser menor a 0.')
+                window.alert('La energía actual no puede ser menor a 0.');
+                return;
             }
             else if (te < 1){
-                window.alert('La energía final debe ser mayor a 0.')
+                window.alert('La energía final debe ser mayor a 0.');
+                return;
             }
             else if (ce > te){
-                window.alert('La energía actual no puede ser mayor a la final.')
+                window.alert('La energía actual no puede ser mayor a la final.');
+                return;
             }
             else {
-                window.alert('Error desconocido. ¯\_(ツ)_/¯')
+                window.alert('Error desconocido. ¯\_(ツ)_/¯');
+                return;
             }
         };
         function encalc() {
@@ -205,24 +212,47 @@
             };
 
             if (ce > -1 && te > 0 && ce < te) {
-                document.getElementById('english-time').value = teTime - ceTime + ' minutes';
-                return
+                var finalTime = teTime - ceTime;
+                var convertedTime = enTimeConverter(finalTime);
+                document.getElementById('english-time').value = convertedTime;
+                return;
             }
             else if (ce == te){
                 document.getElementById('english-time').value = 'You reached the final energy.';
+                return;
             }
             else if (ce < 0 ){
-                window.alert('Current energy cannot be fewer than 0.')
+                window.alert('Current energy cannot be fewer than 0.');
+                return;
             }
             else if (te < 1){
-                window.alert('Final energy must be over 0.')
+                window.alert('Final energy must be over 0.');
+                return;
             }
             else if (ce > te){
-                window.alert('Current energy cannot be greater than final energy.')
+                window.alert('Current energy cannot be greater than final energy.');
+                return;
             }
             else {
-                window.alert('Unknown error. ¯\_(ツ)_/¯')
+                window.alert('Unknown error. ¯\_(ツ)_/¯');
+                return;
             }
+        };
+
+        function esTimeConverter(minutes) {
+            var Hours = Math.floor(minutes / 60);
+            var Minutes = minutes % 60;
+
+            var finalString = Hours + ' horas y ' + Minutes + ' minutos'
+            return finalString;
+        };
+
+        function enTimeConverter(minutes) {
+            var Hours = Math.floor(minutes / 60);
+            var Minutes = minutes % 60;
+
+            var finalString = Hours + ' hours and ' + Minutes + ' minutes'
+            return finalString;
         };
     </script>
 </body>
